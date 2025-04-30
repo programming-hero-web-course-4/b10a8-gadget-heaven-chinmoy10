@@ -1,0 +1,274 @@
+[
+    {
+      "product_id": "P001",
+      "product_title": "Galaxy S24 Ultra",
+      "product_image": "https://i.ibb.co.com/XfdXg46W/1.jpg",
+      "category": "Smartphone",
+      "price": 1199.99,
+      "description": "Samsung's flagship phone with a powerful camera and high-end performance.",
+      "specification": [
+        "6.8-inch AMOLED display",
+        "Snapdragon 8 Gen 2 processor",
+        "12GB RAM",
+        "5000mAh battery",
+        "Quad rear camera (200MP main)"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "P002",
+      "product_title": "iPhone 15 Pro Max",
+      "product_image": "https://i.ibb.co.com/4ZXY3d22/2.jpg",
+      "category": "Smartphone",
+      "price": 1299.00,
+      "description": "Apple’s most advanced iPhone with A17 Pro chip and titanium design.",
+      "specification": [
+        "6.7-inch Super Retina XDR display",
+        "A17 Pro chip",
+        "8GB RAM",
+        "4852mAh battery",
+        "Triple camera system"
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": "P003",
+      "product_title": "Google Pixel 8 Pro",
+      "product_image": "https://i.ibb.co.com/Ps7m8dx6/3.jpg",
+      "category": "Smartphone",
+      "price": 999.99,
+      "description": "Google’s premium phone with AI features and top-notch camera quality.",
+      "specification": [
+        "6.7-inch LTPO OLED display",
+        "Google Tensor G3",
+        "12GB RAM",
+        "5050mAh battery",
+        "50MP main camera"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "P004",
+      "product_title": "OnePlus 12",
+      "product_image": "https://i.ibb.co.com/bM5b1CFX/4.jpg",
+      "category": "Smartphone",
+      "price": 799.00,
+      "description": "Flagship killer with excellent performance and fast charging.",
+      "specification": [
+        "6.82-inch AMOLED 120Hz",
+        "Snapdragon 8 Gen 3",
+        "16GB RAM",
+        "5400mAh battery",
+        "100W fast charging"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "P005",
+      "product_title": "Sony Xperia 1 V",
+      "product_image": "https://i.ibb.co.com/Y4KzSfvd/5.jpg",
+      "category": "Smartphone",
+      "price": 1399.99,
+      "description": "Pro-grade photography phone with a 4K OLED display.",
+      "specification": [
+        "6.5-inch 4K OLED display",
+        "Snapdragon 8 Gen 2",
+        "12GB RAM",
+        "5000mAh battery",
+        "Triple 12MP rear cameras"
+      ],
+      "availability": false,
+      "rating": 4.4
+    },
+    {
+      "product_id": "P006",
+      "product_title": "Nothing Phone 2",
+      "product_image": "https://i.ibb.co.com/jvwWfQfg/6.jpg",
+      "category": "Smartphone",
+      "price": 599.00,
+      "description": "Stylish and unique transparent design with clean Android experience.",
+      "specification": [
+        "6.7-inch OLED display",
+        "Snapdragon 8+ Gen 1",
+        "12GB RAM",
+        "4700mAh battery",
+        "Glyph Interface lighting"
+      ],
+      "availability": true,
+      "rating": 4.3
+    },
+    {
+        "product_id": "P007",
+        "product_title": "MacBook Pro 16-inch",
+        "product_image": "https://i.ibb.co.com/DH2MfqJ2/7.jpg",
+        "category": "Laptop",
+        "price": 3499.00,
+        "description": "Apple’s most powerful MacBook with the new M3 Max chip for pro users.",
+        "specification": [
+          "16.2-inch Liquid Retina XDR display",
+          "Apple M3 Max chip (14-core CPU, 40-core GPU)",
+          "64GB unified memory",
+          "2TB SSD",
+          "macOS Sonoma"
+        ],
+        "availability": true,
+        "rating": 4.9
+      },
+      {
+        "product_id": "P008",
+        "product_title": "Dell XPS 15",
+        "product_image": "https://i.ibb.co.com/mCh3ZWrr/8.jpg",
+        "category": "Laptop",
+        "price": 1899.00,
+        "description": "High-end Windows laptop with an InfinityEdge display and strong performance.",
+        "specification": [
+          "15.6-inch OLED 3.5K display",
+          "Intel Core i9-13900H",
+          "32GB DDR5 RAM",
+          "1TB SSD",
+          "Windows 11 Pro"
+        ],
+        "availability": true,
+        "rating": 4.7
+      },
+      {
+        "product_id": "P009",
+        "product_title": "HP Spectre x360 14",
+        "product_image": "https://i.ibb.co.com/TqbtbRH6/9.jpg",
+        "category": "Laptop",
+        "price": 1499.00,
+        "description": "Premium 2-in-1 convertible laptop with touchscreen and long battery life.",
+        "specification": [
+          "13.5-inch 3:2 OLED touchscreen",
+          "Intel Core i7-1355U",
+          "16GB LPDDR5 RAM",
+          "1TB NVMe SSD",
+          "Windows 11 Home"
+        ],
+        "availability": false,
+        "rating": 4.5
+      },
+      {
+        "product_id": "P0010",
+        "product_title": "ASUS ROG Zephyrus G14",
+        "product_image": "https://i.ibb.co.com/67kg7Z1n/10.jpg",
+        "category": "Laptop",
+        "price": 1799.99,
+        "description": "A powerful gaming laptop in a portable 14-inch form factor.",
+        "specification": [
+          "14-inch QHD+ 165Hz display",
+          "AMD Ryzen 9 8945HS",
+          "32GB DDR5 RAM",
+          "1TB SSD",
+          "NVIDIA RTX 4070"
+        ],
+        "availability": true,
+        "rating": 4.6
+      },
+      {
+        "product_id": "P0011",
+        "product_title": "Apple Watch Series 9",
+        "product_image": "https://i.ibb.co.com/PZ6zMwNV/11.jpg",
+        "category": "Smart Watch",
+        "price": 399.00,
+        "description": "The latest Apple Watch with enhanced health tracking and faster performance.",
+        "specification": [
+          "45mm Always-On Retina display",
+          "S9 SiP chip",
+          "Blood oxygen & ECG apps",
+          "Up to 18 hours battery life",
+          "watchOS 10"
+        ],
+        "availability": true,
+        "rating": 4.8
+      },
+      {
+        "product_id": "P0012",
+        "product_title": "Samsung Galaxy Watch6 Classic",
+        "product_image": "https://i.ibb.co.com/LDsqrzh0/12.jpg",
+        "category": "Smart Watch",
+        "price": 429.99,
+        "description": "Premium smartwatch with rotating bezel and comprehensive fitness tracking.",
+        "specification": [
+          "47mm Super AMOLED display",
+          "Exynos W930 processor",
+          "BioActive Sensor (HR, ECG, BIA)",
+          "IP68 water resistance",
+          "Wear OS 4"
+        ],
+        "availability": true,
+        "rating": 4.6
+      },
+      {
+        "product_id": "P0013",
+        "product_title": "Sony WF-1000XM5",
+        "product_image": "https://i.ibb.co.com/BKsr0Fzf/13.jpg",
+        "category": "Earbuds",
+        "price": 299.99,
+        "description": "Industry-leading noise cancellation and crystal-clear audio in a compact form.",
+        "specification": [
+          "Active noise cancellation",
+          "Bluetooth 5.3",
+          "8-hour battery life (24h with case)",
+          "Multipoint connectivity",
+          "360 Reality Audio"
+        ],
+        "availability": true,
+        "rating": 4.7
+      },
+      {
+        "product_id": "P0014",
+        "product_title": "Bose QuietComfort Ultra Earbuds",
+        "product_image": "https://i.ibb.co.com/CsPHgjyf/14.jpg",
+        "category": "Earbuds",
+        "price": 299.00,
+        "description": "High-end earbuds with spatial audio and exceptional comfort.",
+        "specification": [
+          "CustomTune sound calibration",
+          "Bluetooth 5.3",
+          "Up to 6 hours playback (24h with case)",
+          "IPX4 water resistance",
+          "Immersive Audio mode"
+        ],
+        "availability": false,
+        "rating": 4.5
+      },
+      {
+        "product_id": "P0015",
+        "product_title": "Garmin Venu 3",
+        "product_image": "https://i.ibb.co.com/9k0btTwQ/15.jpg",
+        "category": "Smart Watch",
+        "price": 449.99,
+        "description": "Advanced fitness and health tracking smartwatch with AMOLED display.",
+        "specification": [
+          "1.4-inch AMOLED display",
+          "Heart rate, SpO2, sleep tracking",
+          "Built-in GPS",
+          "Up to 14 days battery life",
+          "Water resistant (5 ATM)"
+        ],
+        "availability": true,
+        "rating": 4.6
+      },
+      {
+        "product_id": "P0016",
+        "product_title": "Jabra Elite 10",
+        "product_image": "https://i.ibb.co.com/GQDzBvM3/16.jpg",
+        "category": "Earbuds",
+        "price": 249.99,
+        "description": "Comfortable, secure-fit earbuds with Dolby Atmos spatial sound and ANC.",
+        "specification": [
+          "Hybrid Active Noise Cancellation",
+          "Bluetooth 5.3 with multipoint",
+          "6-hour battery (27h with case)",
+          "Dolby Head Tracking",
+          "IP57-rated waterproof"
+        ],
+        "availability": true,
+        "rating": 4.4
+      }
+  ]
