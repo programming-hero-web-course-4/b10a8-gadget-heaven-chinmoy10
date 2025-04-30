@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <div className='mt-[450px] px-20'>
+            <div className='mt-[450px] mx-44'>
             <GadgetsCategories></GadgetsCategories>
             </div>
         </div>

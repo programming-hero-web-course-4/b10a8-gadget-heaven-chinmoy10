@@ -9,7 +9,7 @@ const GadgetsCategories = () => {
                     </div>
                 </div>
                 <div className="col-span-3">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-red-200">
                     <div>Product</div>
                     <div>Product</div>
                     <div>Product</div>
