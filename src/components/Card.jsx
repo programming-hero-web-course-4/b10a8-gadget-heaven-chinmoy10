@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Card = ({ product }) => {
 //   console.log(product);
-  const { product_title, product_image, price } = product || {};
+  const { product_id, product_title, product_image, price } = product || {};
   return (
     <>
       <div className="card bg-white shadow-md border">
@@ -15,9 +16,11 @@ const Card = ({ product }) => {
             Price: {price}k
           </p>
           <div className="card-actions">
+            <Link to={`/product/${product_id}`}>
             <button className="btn rounded-full border-2 border-[#9538E2] text-lg font-semibold text-[#9538E2] bg-none hover:bg-[#9538E2] hover:text-white">
               View Details
             </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -4,26 +4,38 @@ import Card from "./Card";
 
 const ProductCard = () => {
   const productsData = useLoaderData();
-//   console.log(productsData);
+  //   console.log(productsData);
   const { category } = useParams();
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     if (category) {
-      const filteredByCategory = [...productsData].filter((product) => product.category === category
-      )
+      const filteredByCategory = [...productsData].filter(
+        (product) => product.category === category
+      );
       setProducts(filteredByCategory);
-      
+    } else {
+      setProducts(productsData.slice(0, 7));
     }
   }, [productsData, category]);
   console.log(products);
   return (
     <>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {
-            products.length === 0? "Not Availavle":products.map((product,i) => <Card key={i} product={product}></Card>)
-        }
-    </div>
+      {products.length === 0 ? (
+        <>
+          <div className="border-2 p-5 rounded-2xl">
+            <div className="flex items-center justify-center bg-[#d7a5ff59] p-24 lg:p-44 rounded-2xl">
+              <div className="text-3xl font-semibold">No Product Available</div>
+            </div>
+          </div>
+        </>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {products.map((product, i) => (
+            <Card key={i} product={product}></Card>
+          ))}
+        </div>
+      )}
     </>
   );
 };
