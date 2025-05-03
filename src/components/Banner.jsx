@@ -9,7 +9,7 @@ const Banner = () => {
         className="hero bg-[#9538E2] text-white rounded-b-3xl md:py-16 md:pb-48 relative"
       >
         
-        <div className="hero-content text-center">
+        <div className="hero-content text-center relative">
           <div className="">
             <h1 className="mb-5 text-2xl md:text-5xl font-bold md:leading-normal">Upgrade Your Tech Accessorize with <br className="hidden md:flex" /> Gadget Heaven Accessories</h1>
             <p className="mb-7 text-base font-normal">

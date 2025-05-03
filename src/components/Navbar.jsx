@@ -36,13 +36,13 @@ const Navbar = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-[#d7a5ff59] rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                className="menu menu-md dropdown-content bg-[#fcfcfc] text-black rounded-box z-[1] mt-3 w-64 p-2 shadow-2xl"
               >
                 <li>
                   <NavLink
                     to="/"
                     className={({ isActive }) =>
-                      `font-bold ${isActive ? "text-white" : ""}`
+                      `font-bold ${isActive ? "bg-[#9538E2] text-white" : ""}`
                     }
                   >
                     Home
