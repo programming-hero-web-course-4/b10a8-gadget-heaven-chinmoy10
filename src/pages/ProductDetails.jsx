@@ -3,16 +3,21 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Heading from "../components/Heading";
 import { IoCartOutline } from "react-icons/io5";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
+import { addStoredProductList, getStoredProductList } from "../utility/addRemoveProduct";
 
 const ProductDetails = () => {
   const { product_id } = useParams();
   const productsData = useLoaderData();
   const [product, setProduct] = useState({});
 
+  // const [isFavorite, setIsFavorite] = useState(false)
+
   useEffect(() => {
-    const singleProduct = productsData.find(
-      (product) => product.product_id === product_id
-    );
+    const singleProduct = productsData.find((product) => product.product_id === product_id);
+    // const favoriteProduct = getStoredProductList();
+    // if(favoriteProduct.includes(singleProduct.product_id)){
+
+    // }
     setProduct(singleProduct);
   }, [productsData, product_id]);
 
@@ -26,6 +31,14 @@ const ProductDetails = () => {
     availability,
     rating,
   } = product;
+
+
+  const handleAddProduct = (id) =>{
+    addStoredProductList(id)
+  }
+
+
+
 
   return (
     <>
@@ -79,7 +92,7 @@ const ProductDetails = () => {
                   </div>
               </p>
               <div className="space-x-2">
-                <button className="btn bg-[#9538E2] text-white font-bold rounded-full">Add To Card <IoCartOutline size={22} /></button>
+                <button onClick={() => handleAddProduct(product_id)} className="btn bg-[#9538E2] text-white font-bold rounded-full">Add To Card <IoCartOutline size={22} /></button>
                 <div className="rating rating-sm bg-white border border-gray-300 p-2 rounded-full cursor-pointer">
                   <input type="radio" name="rating-3" className="mask mask-heart bg-red-500" />
                 </div>
