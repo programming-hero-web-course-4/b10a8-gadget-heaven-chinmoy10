@@ -10,21 +10,35 @@ const getStoredProductList = () => {
   }
 };
 
+
+
 const addStoredProductList = (product) => {
   const storedProduct = getStoredProductList();
   const isProductExist = storedProduct.find((p) => p.id == product.id);
-  if (isProductExist) return toast.error("already exist this product");
+  if (isProductExist) return toast.error("Already Exist This Product", {
+    position: "top-center",
+    autoClose: 800,
+    theme: "colored",
+    });
   storedProduct.push(product);
   const storedListStr = JSON.stringify(storedProduct);
   localStorage.setItem("product-list", storedListStr);
-  toast.success("successfully product added");
+  toast.success("Successfully product added", {
+    position: "top-center",
+    autoClose: 800,
+    theme: "colored",
+    });
 };
 
 const removeStoredProduct = (id) => {
   const storedProduct = getStoredProductList();
   const remainingProduct = storedProduct.filter((product) => product.id != id);
   localStorage.setItem("product-list", JSON.stringify(remainingProduct));
-  toast.success("remove successfully");
+  toast.success("Remove Successfully", {
+    position: "top-center",
+    autoClose: 800,
+    theme: "colored",
+    });
 };
 
 // wishlist
@@ -42,11 +56,19 @@ const getStoredWishList = () => {
 const addWishProductList = (product) => {
   const storedWishProduct = getStoredWishList();
   const isWishProductExist = storedWishProduct.find((p) => p.id == product.id);
-  if (isWishProductExist) return toast.error("already exist this product");
+  if (isWishProductExist) return toast.error("Already Exist This Product", {
+    position: "top-center",
+    autoClose: 800,
+    theme: "colored",
+    });
     storedWishProduct.push(product);
     const storedListStr = JSON.stringify(storedWishProduct);
     localStorage.setItem("wish-list", storedListStr);
-    toast.success("successfully added");
+    toast.success("Successfully Added", {
+        position: "top-center",
+        autoClose: 800,
+        theme: "colored",
+        });
 };
 
 const removeStoredWishProduct = (id) => {
@@ -55,7 +77,11 @@ const removeStoredWishProduct = (id) => {
     (product) => product.id != id
   );
   localStorage.setItem("wish-list", JSON.stringify(remainingWishProduct));
-  toast.success("remove successfully");
+  toast.success("Remove Successfully", {
+    position: "top-center",
+    autoClose: 800,
+    theme: "colored",
+    });
 };
 
 export {

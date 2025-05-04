@@ -18,7 +18,7 @@ const ProductCard = () => {
       setProducts(productsData.slice(0, 7));
     }
   }, [productsData, category]);
-  console.log(products);
+  // console.log(products);
   return (
     <>
       {products.length === 0 ? (

@@ -9,6 +9,7 @@ import {
   getStoredProductList,
   getStoredWishList,
 } from "../utility/addRemoveProduct";
+import Dashboard from "./Dashboard";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -31,22 +32,34 @@ const ProductDetails = () => {
     const singleProduct = productsData.find(
       (product) => product.id == id
     );
-    const favoriteProduct = (getStoredProductList() || getStoredWishList());
-    // const favoriteWishProduct = getStoredWishList();
-    const isExist = favoriteProduct.find(
-      (item) => item.id == singleProduct.id
-    );
+    const favoriteProduct = getStoredProductList();
+    const favoriteWishProduct = getStoredWishList();
+    const isExist = favoriteProduct.find((item) => item.id == singleProduct.id);
+    const isWishExist = favoriteWishProduct.find((item) => item.id == singleProduct.id);
     if (isExist) {
       setIsFavorite(true);
+    }
+    else if(isWishExist){
+      setIsFavorite (true);
     }
     setProduct(singleProduct);
   }, [productsData, id]);
 
+  const [totalProductMoney, setTotalProductMoney] = useState(0)
 
   const handleAddProduct = (product) => {
     addStoredProductList(product);
     setIsFavorite(true);
+
+    
+
   };
+
+  const handleAddPrice = (price) => {
+    const totalProductValue = totalProductMoney + parseFloat(price);
+    console.log(totalProductMoney, price, totalProductValue);
+    setTotalProductMoney(totalProductValue);
+  }
 
   const handleFavoriteProduct = (product) => {
     addWishProductList(product);
@@ -136,22 +149,28 @@ const ProductDetails = () => {
               <div className="flex gap-2">
                 <button
                   disabled={isFavorite}
-                  onClick={() => handleAddProduct(product)}
+                  onClick={() => {
+                    handleAddProduct(product)
+                    handleAddPrice(price);
+                  }}
                   className="btn bg-[#9538E2] text-white font-bold rounded-full"
                 >
                   Add To Card <IoCartOutline size={22} />
                 </button>
-                <div
+                <button
                   disabled={isFavorite}
                   onClick={() => handleFavoriteProduct(product)}
                   className="bg-white border border-gray-300 p-2 rounded-full cursor-pointer"
                 >
                   <MdFavorite size={22} className="text-red-500" />
-                </div>
+                </button>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div className="hidden">
+      <Dashboard totalProductMoney={totalProductMoney}></Dashboard>
       </div>
     </>
   );
