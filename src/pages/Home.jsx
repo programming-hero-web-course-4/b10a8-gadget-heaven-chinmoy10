@@ -5,7 +5,9 @@ import { Outlet, useLoaderData } from "react-router-dom";
 import Categories from "../components/Categories";
 
 const Home = () => {
+  document.title="Home | Gadget Heaven";
   const categories = useLoaderData();
+
   return (
     <div>
       <Banner></Banner>

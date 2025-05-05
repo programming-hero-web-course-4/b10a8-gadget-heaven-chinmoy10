@@ -9,9 +9,9 @@ import {
   getStoredProductList,
   getStoredWishList,
 } from "../utility/addRemoveProduct";
-import Dashboard from "./Dashboard";
 
 const ProductDetails = () => {
+  document.title="Product Details | Gadget Heaven";
   const { id } = useParams();
   const productsData = useLoaderData();
   const [product, setProduct] = useState({});
@@ -45,19 +45,16 @@ const ProductDetails = () => {
     setProduct(singleProduct);
   }, [productsData, id]);
 
-  const [totalProductMoney, setTotalProductMoney] = useState(0)
-
   const handleAddProduct = (product) => {
     addStoredProductList(product);
     setIsFavorite(true);
-
-    
-
   };
 
-  const handleAddPrice = (price) => {
-    const totalProductValue = totalProductMoney + parseFloat(price);
-    console.log(totalProductMoney, price, totalProductValue);
+
+  const [totalProductMoney, setTotalProductMoney] = useState(0)
+
+  const handleAddPrice = () => {
+    const totalProductValue = totalProductMoney + 5000;
     setTotalProductMoney(totalProductValue);
   }
 
@@ -151,7 +148,7 @@ const ProductDetails = () => {
                   disabled={isFavorite}
                   onClick={() => {
                     handleAddProduct(product)
-                    handleAddPrice(price);
+                    handleAddPrice();
                   }}
                   className="btn bg-[#9538E2] text-white font-bold rounded-full"
                 >
@@ -168,9 +165,6 @@ const ProductDetails = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="hidden">
-      <Dashboard totalProductMoney={totalProductMoney}></Dashboard>
       </div>
     </>
   );

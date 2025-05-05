@@ -5,12 +5,14 @@ import "react-tabs/style/react-tabs.css";
 import { SlEqualizer } from "react-icons/sl";
 import { getStoredProductList, getStoredWishList, removeStoredProduct, removeStoredWishProduct } from "../utility/addRemoveProduct";
 import CartWish from "../components/CartWish";
+import ModalImg from "../assets/Group.png";
+import { useNavigate } from "react-router-dom";
 
 
-const Dashboard = ({totalProductMoney}) => {
-  console.log(totalProductMoney)
+const Dashboard = () => {
+  document.title="Dashboard | Gadget Heaven";
 
-
+  const navigate = useNavigate();
   const [addCartList, setAddCartList] = useState([]);
   const [addWishList, setAddWishList] = useState([]);
 
@@ -36,9 +38,9 @@ const Dashboard = ({totalProductMoney}) => {
     const addCartProduct = getStoredProductList();
     setAddCartList(addCartProduct);
 
-    // removeStoredWishProduct(id);
-    // const addWishProduct = getStoredWishList();
-    // setAddWishList(addWishProduct);
+    removeStoredWishProduct(id);
+    const addWishProduct = getStoredWishList();
+    setAddWishList(addWishProduct);
   }
 
   return (
@@ -74,9 +76,32 @@ const Dashboard = ({totalProductMoney}) => {
                 <h2 className="text-2xl font-bold">Cart: {addCartList.length}</h2>
                 </div>
                 <div className="flex flex-col md:flex-row items-center gap-5">
-                  <p className="text-2xl font-bold">Total cost: {totalProductMoney}</p>
+                  <p className="text-2xl font-bold">Total cost: 0</p>
                   <button onClick={() => handleSortBy("price")} className="btn flex items-center shadow-none rounded-full text-[#9538E2] gap-2 text-lg font-semibold border-2 border-[#9538E2] bg-transparent hover:bg-transparent">Sort By Price <SlEqualizer /></button>
-                  <button className="btn text-lg font-semibold  shadow-none rounded-full text-white border bg-gradient-to-b from-[#9538E2] to-fuchsia-500">Purchase</button>
+
+                  {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                    <button className="btn text-lg font-semibold  shadow-none rounded-full text-white border bg-gradient-to-b from-[#9538E2] to-fuchsia-500" onClick={()=>document.getElementById('my_modal_4').showModal()}>Purchase</button>
+                    <dialog id="my_modal_4" className="modal">
+                      <div className="modal-box flex flex-col items-center max-w-xs">
+                        <div>
+                          <img src={ModalImg} alt="" />
+                        </div>
+                        <h2 className="text-2xl font-bold pt-2">Payment Successful</h2>
+                        <div className="divider"></div>
+                        <p className="text-gray-500">Thanks for purchasing</p>
+                        <p className="py-2 text-gray-500">Total: 0</p>
+
+                        <div className="w-full mx-auto">
+                          <form method="dialog">
+                            {/* if there is a button, it will close the modal */}
+                            <button onClick={() => {
+                              navigate("/");
+                              handleRemoveProduct([])
+                            }} className="btn w-full rounded-full">Close</button>
+                          </form>
+                        </div>
+                      </div>
+                    </dialog>
                 </div>
               </div>
               {
