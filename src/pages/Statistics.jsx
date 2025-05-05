@@ -46,7 +46,7 @@ const Statistics = () => {
                 bottom: 5,
               }}
             >
-              <CartesianGrid strokeDasharray="3 3" />
+              <CartesianGrid strokeDasharray="2 2" />
               <XAxis dataKey="product_title" />
               <YAxis dataKey="price" />
               <Tooltip />

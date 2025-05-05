@@ -7,6 +7,8 @@ import { getStoredProductList, getStoredWishList, removeStoredProduct, removeSto
 import CartWish from "../components/CartWish";
 import ModalImg from "../assets/Group.png";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import WishList from "../components/WishLIst";
 
 
 const Dashboard = () => {
@@ -38,6 +40,10 @@ const Dashboard = () => {
     const addCartProduct = getStoredProductList();
     setAddCartList(addCartProduct);
 
+    
+  }
+
+  const handleWishListRemoveProduct = (id) =>{
     removeStoredWishProduct(id);
     const addWishProduct = getStoredWishList();
     setAddWishList(addWishProduct);
@@ -80,7 +86,7 @@ const Dashboard = () => {
                   <button onClick={() => handleSortBy("price")} className="btn flex items-center shadow-none rounded-full text-[#9538E2] gap-2 text-lg font-semibold border-2 border-[#9538E2] bg-transparent hover:bg-transparent">Sort By Price <SlEqualizer /></button>
 
                   {/* You can open the modal using document.getElementById('ID').showModal() method */}
-                    <button className="btn text-lg font-semibold  shadow-none rounded-full text-white border bg-gradient-to-b from-[#9538E2] to-fuchsia-500" onClick={()=>document.getElementById('my_modal_4').showModal()}>Purchase</button>
+                    <button disabled className="btn text-lg font-semibold  shadow-none rounded-full text-white border bg-gradient-to-b from-[#9538E2] to-fuchsia-500" onClick={()=>document.getElementById('my_modal_4').showModal()}>Purchase</button>
                     <dialog id="my_modal_4" className="modal">
                       <div className="modal-box flex flex-col items-center max-w-xs">
                         <div>
@@ -96,7 +102,7 @@ const Dashboard = () => {
                             {/* if there is a button, it will close the modal */}
                             <button onClick={() => {
                               navigate("/");
-                              handleRemoveProduct([])
+                              toast.success("Back to Home");
                             }} className="btn w-full rounded-full">Close</button>
                           </form>
                         </div>
@@ -111,7 +117,7 @@ const Dashboard = () => {
             <TabPanel>
               <h2 className="text-2xl font-bold">Wish Read: </h2>
               {
-                addWishList.map((product) => <CartWish key={product.id} product={product} handleRemoveProduct={handleRemoveProduct}></CartWish>)
+                addWishList.map((product)=> <WishList key={product.id} product={product} handleWishListRemoveProduct={handleWishListRemoveProduct}></WishList>)
               }
             </TabPanel>
           </div>

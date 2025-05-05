@@ -1,8 +1,10 @@
 import React from "react";
 import bannerImg from "../assets/banner.jpg"
+import { useNavigate } from "react-router-dom";
 
 
 const Banner = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div
@@ -15,11 +17,11 @@ const Banner = () => {
             <p className="mb-7 text-base font-normal">
             Explore the latest gadgets that will take your experience to the next level. <br className="hidden md:flex"/> From smart devices to the coolest accessories, we have it all!
             </p>
-            <button className="btn bg-white rounded-full text-[#9538E2] text-xl font-bold outline-none p-7 shadow-none">Shop Now</button>
+            <button onClick={() => navigate("/dashboard")} className="btn bg-white rounded-full text-[#9538E2] text-xl font-bold outline-none p-7 shadow-none">Shop Now</button>
           </div>
         </div>
         <div className="absolute md:w-[750px] lg:w-[1062px] h-[350px] lg:h-[563px] translate-y-[340px] lg:translate-y-[370px] z-10 bg-[#ffffff38] border-4 border-white rounded-3xl shadow-lg md:shadow-sm">
-            <img className="h-full w-full rounded-[44px] p-6 object-cover" src={bannerImg} alt="" />
+            <img  className="h-full w-full rounded-[44px] p-6 object-cover" src={bannerImg} alt="" />
         </div>
       </div>
     </>

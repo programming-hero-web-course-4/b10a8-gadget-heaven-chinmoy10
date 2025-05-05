@@ -23,7 +23,7 @@ const addStoredProductList = (product) => {
   storedProduct.push(product);
   const storedListStr = JSON.stringify(storedProduct);
   localStorage.setItem("product-list", storedListStr);
-  toast.success("Successfully product added", {
+  toast.success("Successfully Added In Cart", {
     position: "top-center",
     autoClose: 800,
     theme: "colored",
@@ -34,7 +34,7 @@ const removeStoredProduct = (id) => {
   const storedProduct = getStoredProductList();
   const remainingProduct = storedProduct.filter((product) => product.id != id);
   localStorage.setItem("product-list", JSON.stringify(remainingProduct));
-  toast.success("Remove Successfully", {
+  toast.success("Remove Successfully From Cart", {
     position: "top-center",
     autoClose: 800,
     theme: "colored",
@@ -64,7 +64,7 @@ const addWishProductList = (product) => {
     storedWishProduct.push(product);
     const storedListStr = JSON.stringify(storedWishProduct);
     localStorage.setItem("wish-list", storedListStr);
-    toast.success("Successfully Added", {
+    toast.success("Successfully Added In Wishlist", {
         position: "top-center",
         autoClose: 800,
         theme: "colored",
@@ -77,12 +77,30 @@ const removeStoredWishProduct = (id) => {
     (product) => product.id != id
   );
   localStorage.setItem("wish-list", JSON.stringify(remainingWishProduct));
-  toast.success("Remove Successfully", {
+  toast.success("Remove Successfully From Favorite", {
     position: "top-center",
     autoClose: 800,
     theme: "colored",
     });
 };
+
+// const storedProductList = getStoredProductList();
+// console.log(storedProductList.product);
+
+
+const totalValue = (product) =>{
+  
+  let totalProductValue = 0;
+  const storedProductList = getStoredProductList();
+  const storedProductExist =  storedProductList.find(p => p.id == product.id);
+  if(storedProductExist){
+    const totalMoney = totalProductValue + product.price;
+    return totalMoney;
+  }
+  const remainingProduct = totalProductValue + product.price;
+  console.log(remainingProduct);
+  return remainingProduct;
+}
 
 export {
   getStoredProductList,
@@ -91,4 +109,5 @@ export {
   getStoredWishList,
   addWishProductList,
   removeStoredWishProduct,
+  totalValue
 };

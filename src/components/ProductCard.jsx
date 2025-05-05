@@ -36,6 +36,8 @@ const ProductCard = () => {
           ))}
         </div>
       )}
+
+      <button className="btn rounded-full border-2 border-[#9538E2] text-lg font-semibold text-white bg-[#9538E2] mt-5" onClick={()=> setProducts(productsData)}>All Products</button>
     </>
   );
 };
