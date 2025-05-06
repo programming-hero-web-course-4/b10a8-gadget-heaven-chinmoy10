@@ -11,7 +11,7 @@ const Navbar = () => {
           pathname === "/" ? "bg-[#9538E2] text-white rounded-t-3xl" : ""
         }
       >
-        <div className="navbar lg:flex-row px-8 lg:px-32 lg:pt-8">
+        <div className="navbar lg:flex-row px-0 lg:px-32 lg:pt-8">
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -80,7 +80,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <Link to="/" className="text-3xl font-bold cursor-pointer">
+            <Link to="/" className="text-xl lg:text-3xl font-bold cursor-pointer">
               Gadget Heaven
             </Link>
           </div>

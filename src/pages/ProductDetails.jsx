@@ -7,8 +7,7 @@ import {
   addStoredProductList,
   addWishProductList,
   getStoredProductList,
-  getStoredWishList,
-  totalValue,
+  getStoredWishList
 } from "../utility/addRemoveProduct";
 import Dashboard from "./Dashboard";
 
@@ -150,7 +149,7 @@ const ProductDetails = () => {
                 <button
                   disabled={isFavorite}
                   onClick={() => handleFavoriteProduct(product)}
-                  className="bg-white border border-gray-300 p-2 rounded-full cursor-pointer"
+                  className="bg-white border border-gray-300 p-2 rounded-full"
                 >
                   <MdFavorite size={22} className="text-red-500" />
                 </button>

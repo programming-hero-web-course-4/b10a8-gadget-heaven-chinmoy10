@@ -84,23 +84,7 @@ const removeStoredWishProduct = (id) => {
     });
 };
 
-// const storedProductList = getStoredProductList();
-// console.log(storedProductList.product);
 
-
-const totalValue = (product) =>{
-  
-  let totalProductValue = 0;
-  const storedProductList = getStoredProductList();
-  const storedProductExist =  storedProductList.find(p => p.id == product.id);
-  if(storedProductExist){
-    const totalMoney = totalProductValue + product.price;
-    return totalMoney;
-  }
-  const remainingProduct = totalProductValue + product.price;
-  console.log(remainingProduct);
-  return remainingProduct;
-}
 
 export {
   getStoredProductList,
@@ -108,6 +92,5 @@ export {
   removeStoredProduct,
   getStoredWishList,
   addWishProductList,
-  removeStoredWishProduct,
-  totalValue
+  removeStoredWishProduct
 };
