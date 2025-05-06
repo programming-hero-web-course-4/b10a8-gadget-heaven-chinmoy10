@@ -83,7 +83,7 @@ const Dashboard = ({price}) => {
                 <h2 className="text-2xl font-bold">Cart: {addCartList.length}</h2>
                 </div>
                 <div className="flex flex-col md:flex-row items-center gap-5">
-                  <p className="text-2xl font-bold">Total cost: </p>
+                  <p className="text-2xl font-bold">Total cost: 0</p>
                   <button onClick={() => handleSortBy("price")} className="btn flex items-center shadow-none rounded-full text-[#9538E2] gap-2 text-lg font-semibold border-2 border-[#9538E2] bg-transparent hover:bg-transparent">Sort By Price <SlEqualizer /></button>
 
                   {/* You can open the modal using document.getElementById('ID').showModal() method */}
