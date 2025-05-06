@@ -19,19 +19,19 @@ const ContactUS = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 md:mx-44">
-          <div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-0 md:mx-44">
+          <div className="lg:border-r lg:pr-10">
             <div className="flex flex-col items-center gap-2 py-5">
               <div>
                 <FaPersonCircleQuestion size={100} />
               </div>
               <h4 className="text-lg font-bold">Have Any Question?</h4>
             </div>
-            <div className="pl-4 border-t-2 space-y-4 py-8">
+            <div className="pl-4 border-t space-y-4 py-8">
               <p className="text-sm text-gray-400">INFORMATION QUESTIONS</p>
               <h2 className="text-xl font-bold">FREQUENTLY ASKED QUESTIONS</h2>
             </div>
-            <div className="border-t-2">
+            <div className="border-t">
               <div className="join join-vertical w-full">
                 <div className="collapse collapse-arrow join-item border-b">
                   <input type="radio" name="my-accordion-4" defaultChecked />
@@ -64,7 +64,23 @@ const ContactUS = () => {
             </div>
           </div>
           <div>
-            <div><FcCustomerSupport size={100} /></div>
+            <div className="pl-10">
+              <div className="flex flex-col items-center gap-2 py-5">
+                <div>
+                  <FcCustomerSupport size={100} />
+                </div>
+                <h4 className="text-lg font-bold">Have Any Question?</h4>
+              </div>
+              <div className="pl-4 border-t">
+                <div className="space-y-4 py-8">
+                  <p className="text-sm text-gray-400">INFORMATION QUESTIONS</p>
+                  <h2 className="text-xl font-bold">
+                    FREQUENTLY ASKED QUESTIONS
+                  </h2>
+                </div>
+              </div>
+              <div></div>
+            </div>
           </div>
         </div>
       </div>
