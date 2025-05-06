@@ -11,8 +11,9 @@ import { toast } from "react-toastify";
 import WishList from "../components/WishLIst";
 
 
-const Dashboard = () => {
+const Dashboard = ({price}) => {
   document.title="Dashboard | Gadget Heaven";
+  console.log(price);
 
   const navigate = useNavigate();
   const [addCartList, setAddCartList] = useState([]);
@@ -82,11 +83,11 @@ const Dashboard = () => {
                 <h2 className="text-2xl font-bold">Cart: {addCartList.length}</h2>
                 </div>
                 <div className="flex flex-col md:flex-row items-center gap-5">
-                  <p className="text-2xl font-bold">Total cost: 0</p>
+                  <p className="text-2xl font-bold">Total cost: {addCartList.product}</p>
                   <button onClick={() => handleSortBy("price")} className="btn flex items-center shadow-none rounded-full text-[#9538E2] gap-2 text-lg font-semibold border-2 border-[#9538E2] bg-transparent hover:bg-transparent">Sort By Price <SlEqualizer /></button>
 
                   {/* You can open the modal using document.getElementById('ID').showModal() method */}
-                    <button disabled className="btn text-lg font-semibold  shadow-none rounded-full text-white border bg-gradient-to-b from-[#9538E2] to-fuchsia-500" onClick={()=>document.getElementById('my_modal_4').showModal()}>Purchase</button>
+                    <button className="btn text-lg font-semibold  shadow-none rounded-full text-white border bg-gradient-to-b from-[#9538E2] to-fuchsia-500" onClick={()=>document.getElementById('my_modal_4').showModal()}>Purchase</button>
                     <dialog id="my_modal_4" className="modal">
                       <div className="modal-box flex flex-col items-center max-w-xs">
                         <div>

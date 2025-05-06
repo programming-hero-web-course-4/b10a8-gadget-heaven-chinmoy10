@@ -30,14 +30,20 @@ const ProductCard = () => {
           </div>
         </>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {products.map((product) => (
-            <Card key={product.id} product={product}></Card>
-          ))}
+        <div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {products.map((product) => (
+              <Card key={product.id} product={product}></Card>
+            ))}
+          </div>
+          <button
+            className="btn rounded-full border-2 border-[#9538E2] text-lg font-semibold text-white bg-[#9538E2] mt-5"
+            onClick={() => setProducts(productsData)}
+          >
+            All Products
+          </button>
         </div>
       )}
-
-      <button className="btn rounded-full border-2 border-[#9538E2] text-lg font-semibold text-white bg-[#9538E2] mt-5" onClick={()=> setProducts(productsData)}>All Products</button>
     </>
   );
 };

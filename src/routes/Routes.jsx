@@ -5,11 +5,14 @@ import Statistics from "../pages/Statistics";
 import Dashboard from "../pages/Dashboard";
 import ProductCard from "../components/ProductCard";
 import ProductDetails from "../pages/ProductDetails";
+import ErrorPage from "../pages/ErrorPage";
+import ContactUS from "../pages/ContactUS";
 
 const routes = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -42,6 +45,10 @@ const routes = createBrowserRouter([
         path: "/dashboard",
         element: <Dashboard></Dashboard>,
         loader: () => fetch("../productsData.json"),
+      },
+      {
+        path: "/contact",
+        element: <ContactUS></ContactUS>,
       },
     ],
   },

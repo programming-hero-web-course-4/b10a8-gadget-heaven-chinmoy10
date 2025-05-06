@@ -68,9 +68,19 @@ const Navbar = () => {
                     Dashboard
                   </NavLink>
                 </li>
+                <li>
+                  <NavLink
+                    to="/contact"
+                    className={({ isActive }) =>
+                      `font-bold ${isActive ? "bg-[#9538E2] text-white" : ""}`
+                    }
+                  >
+                    Contact Us
+                  </NavLink>
+                </li>
               </ul>
             </div>
-            <Link to="/" className="text-xl font-bold cursor-pointer">
+            <Link to="/" className="text-3xl font-bold cursor-pointer">
               Gadget Heaven
             </Link>
           </div>
@@ -80,7 +90,7 @@ const Navbar = () => {
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    `font-bold ${isActive ? "text-white border-2" : ""}`
+                    `font-bold ${isActive ? "text-white border-b-2" : ""}`
                   }
                 >
                   Home
@@ -90,7 +100,7 @@ const Navbar = () => {
                 <NavLink
                   to="/statistics"
                   className={({ isActive }) =>
-                    `font-bold ${isActive ? "bg-[#9538E2] text-white" : ""}`
+                    `font-bold ${isActive ? "border-b-2 border-[#9538E2] text-black bg-none hover:bg-none" : ""}`
                   }
                 >
                   Statistics
@@ -100,15 +110,25 @@ const Navbar = () => {
                 <NavLink
                   to="/dashboard"
                   className={({ isActive }) =>
-                    `font-bold ${isActive ? "bg-[#9538E2] text-white" : ""}`
+                    `font-bold ${isActive ? "border-b-2 border-[#9538E2] text-black bg-none hover:bg-none" : ""}`
                   }
                 >
                   Dashboard
                 </NavLink>
               </li>
+              <li>
+                <NavLink
+                  to="/contact"
+                  className={({ isActive }) =>
+                    `font-bold ${isActive ? "border-b-2 border-[#9538E2] text-black bg-none hover:bg-none" : ""}`
+                  }
+                >
+                  Contact US
+                </NavLink>
+              </li>
             </ul>
           </div>
-          <div className="navbar-end gap-5">
+          <div className="navbar-end gap-5 hidden md:flex">
             <Link className="relative border-2 rounded-full text-xl p-3 bg-base-100 text-black">
               <IoCartOutline />
               <div className="absolute bg-[#b47ce2] rounded-full text-base text-white px-1.5 -top-1.5 -right-1.5">

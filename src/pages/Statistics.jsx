@@ -32,7 +32,7 @@ const Statistics = () => {
           </div>
         </div>
       </div>
-      <div className="">
+      <div className="my-8 md:my-16">
         <div className="flex flex-col items-center gap-10">
           <div>
             <BarChart
