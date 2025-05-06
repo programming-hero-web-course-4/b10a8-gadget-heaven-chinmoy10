@@ -36,7 +36,11 @@ The Gadget Heaven website is a ecommerce website. There have different types of 
 - Have a error page for incorrect address 
 - Can see the products statistics
 - Can sort listed items by price in dashboard
+- Dynamic pages title
 
 #### Up Coming features:
 - Can purchase product via website
 - Can see 'add to cart' and 'wish list' items number in navbar
+
+# Live Link: 
+- [Gadget Heaven](https://gadget-heaven-b6065e.netlify.app/)
